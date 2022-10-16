@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 import java.util.Random;
 
@@ -16,7 +16,7 @@ public class Jogo {
 	public Jogo(int qtd, String[] jogadores, int[] suspeito) {
 		this.qtd = qtd;
 		jog = new Jogador[qtd];
-		tabuleiro = new Tabuleiro;
+		tabuleiro = new Tabuleiro();
 		for(int i = 0; i <qtd ; i++) {
 			jog[i] = new Jogador(jogadores[i], suspeito[i]);
 		}
