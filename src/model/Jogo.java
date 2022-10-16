@@ -28,7 +28,7 @@ public class Jogo {
 		/*De 0 a 5 sao os suspeitos, 6 a 11 sao as armas, 12 a 20 sao os locais*/
 		solucao[0] = random.nextInt(6);
 		solucao[1] = random.nextInt(6) + 6;
-		solucao[2] = random.nextInt(6) + 15;
+		solucao[2] = random.nextInt(6) + 12;
 		
 		if(qtd == 3 || qtd == 6) {
 			cartasJog = new int[qtd][18/qtd];
