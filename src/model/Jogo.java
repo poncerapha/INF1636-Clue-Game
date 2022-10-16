@@ -11,12 +11,13 @@ public class Jogo {
 	private String suspeitos[] = {"Srta. Scarlet", "Coronel Mustard", "Professor Plum", "Reverendo Green", "Sra. White", "Sra. Peacock"};
     private String armas[] = {"Corda", "Cano de Chumbo", "Faca", "Chave Inglesa", "Castical", "Revolver"}; 
 	private String comodos[] = {"Banheiro", "Escritorio", "Sala de Estar", "Sala de jogos", "Garagem", "Quarto", "Sala de Estudos", "Cozinha", "Patio"};
-	private String envelope[] = new String[3];
+	private Envelope envelope;
 	
 	public Jogo(int qtd, String[] jogadores, int[] suspeito) {
 		this.qtd = qtd;
 		jog = new Jogador[qtd];
 		tabuleiro = new Tabuleiro();
+		criaEnvelope();
 		for(int i = 0; i <qtd ; i++) {
 			jog[i] = new Jogador(jogadores[i], suspeito[i]);
 		}
@@ -40,10 +41,13 @@ public class Jogo {
 
 	private void criaEnvelope() {
 		Random r = new Random();
+		var assasino = suspeitos[r.nextInt(suspeitos.length - 1)];
+		var arma = armas[r.nextInt(armas.length - 1)];
+		var lugar = comodos[r.nextInt(comodos.length - 1)];
     
-    	envelope[0] = suspeitos[r.nextInt(0, 6)];
-    	envelope[1] = armas[r.nextInt(0, 6)]; 
-    	envelope[2] = comodos[r.nextInt(0, 9)];
+    	envelope.setAssasino(assasino);
+		envelope.setArma(arma);
+		envelope.setLugar(lugar); 
 	}
 
 }
