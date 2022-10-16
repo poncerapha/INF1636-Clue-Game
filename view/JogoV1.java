@@ -8,6 +8,9 @@ public class Jogo {
 	Jogador jog[];
 	String jogadores[] = null;
 	Tabuleiro tabuleiro;
+	private String suspeitos[] = {"Srta. Scarlet", "Coronel Mustard", "Professor Plum", "Reverendo Green", "Sra. White", "Sra. Peacock"};
+    private String armas[] = {"Corda", "Cano de Chumbo", "Faca", "Chave Inglesa", "Castical", "Revolver"}; 
+	private String comodos[] = {"Banheiro", "Escritorio", "Sala de Estar", "Sala de jogos", "Garagem", "Quarto", "Sala de Estudos", "Cozinha", "Patio"};
 	
 	public Jogo(int qtd, String[] jogadores, int[] suspeito) {
 		this.qtd = qtd;
