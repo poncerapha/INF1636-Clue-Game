@@ -11,6 +11,7 @@ public class Jogo {
 	private String suspeitos[] = {"Srta. Scarlet", "Coronel Mustard", "Professor Plum", "Reverendo Green", "Sra. White", "Sra. Peacock"};
     private String armas[] = {"Corda", "Cano de Chumbo", "Faca", "Chave Inglesa", "Castical", "Revolver"}; 
 	private String comodos[] = {"Banheiro", "Escritorio", "Sala de Estar", "Sala de jogos", "Garagem", "Quarto", "Sala de Estudos", "Cozinha", "Patio"};
+	private String envelope[] = new String[3];
 	
 	public Jogo(int qtd, String[] jogadores, int[] suspeito) {
 		this.qtd = qtd;
@@ -36,7 +37,13 @@ public class Jogo {
 		}
 		return false;
 	}
-	
-	
-	
+
+	private void criaEnvelope() {
+		Random r = new Random();
+    
+    	envelope[0] = suspeitos[r.nextInt(0, 6)];
+    	envelope[1] = armas[r.nextInt(0, 6)]; 
+    	envelope[2] = comodos[r.nextInt(0, 9)];
+	}
+
 }
