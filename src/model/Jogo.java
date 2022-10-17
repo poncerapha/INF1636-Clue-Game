@@ -80,8 +80,8 @@ public class Jogo {
 			}
 		}
 		
-		for(int i = 0; i <qtd ; i++) {
-			jog[i] = new Jogador(jogadores[i], suspeito[i]);
+		for(i = 0; i <qtd ; i++) {
+			jog[i] = new Jogador(jogadores[i], suspeito[i], qtdCartasJog[i], cartasJog[i]);
 		}
 		
 		
