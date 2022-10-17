@@ -10,4 +10,20 @@ public class Jogador {
 		this.qtdCartasJog = qtdCartasJog;
 		this.cartasJog = cartasJog;
 	}
+	
+	public String retName() {
+		return nome;
+	}
+	
+	public int retPersonagem() {
+		return suspeito;
+	}
+	
+	public int qtdCartas() {
+		return qtdCartasJog;
+	}
+	
+	public int[] retCartasDoJog() {
+		return cartasJog;
+	}
 }
