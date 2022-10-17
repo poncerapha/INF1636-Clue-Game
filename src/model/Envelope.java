@@ -5,6 +5,12 @@ public class Envelope {
     private String assassino;
     private String lugar;
 
+    public Envelope(String arma, String assassino, String lugar) {
+        this.arma = arma;
+        this.assassino = assassino;
+        this.lugar = lugar;
+    }
+
 
     public void setArma(String arma) {
         this.arma = arma;

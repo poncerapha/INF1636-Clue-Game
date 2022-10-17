@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 public class Jogador {
 	int eliminado = 0, suspeito = -1, qtdCartasJog, cartasJog[];
