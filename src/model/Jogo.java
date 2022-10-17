@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Jogo {
 	Random random = new Random();
-	int qtd, dado[] = new int[2], solucao[] = new int[3], ind = 0, qtdCartasJog[], cartasJog[][];
+	int qtd, dado[] = new int[2], solucao[] = new int[3], ind = 0, qtdCartasJog[], cartasJog[][], i = 0, temp = 0;
 	Jogador jog[];
 	String jogadores[] = null;
 	Tabuleiro tabuleiro;
