@@ -25,11 +25,6 @@ public class Jogo {
 			qtdCartasJog[i] = 0;
 		}
 		
-		/*De 0 a 5 sao os suspeitos, 6 a 11 sao as armas, 12 a 20 sao os locais*/
-		solucao[0] = random.nextInt(6);
-		solucao[1] = random.nextInt(6) + 6;
-		solucao[2] = random.nextInt(6) + 12;
-		
 		if(qtd == 3 || qtd == 6) {
 			cartasJog = new int[qtd][18/qtd];
 		}
@@ -105,19 +100,23 @@ public class Jogo {
 
 	private void criaEnvelope() {
 		Random r = new Random();
-		var assasino = suspeitos[r.nextInt(suspeitos.length - 1)];
-		var arma = armas[r.nextInt(armas.length - 1)];
-		var lugar = comodos[r.nextInt(comodos.length - 1)];
+		/*De 0 a 5 sao os suspeitos, 6 a 11 sao as armas, 12 a 20 sao os locais*/
+		solucao[0] = r.nextInt(6);
+		solucao[1] = r.nextInt(6) + 6;
+		solucao[2] = r.nextInt(6) + 12;
+		var assasino = suspeitos[solucao[0]];
+		var arma = armas[solucao[1]];
+		var lugar = comodos[solucao[2]];
     
-    	envelope.setAssasino(assasino);
+    		envelope.setAssasino(assasino);
 		envelope.setArma(arma);
 		envelope.setLugar(lugar); 
 	}
 
 	public int[] jogarDados(){
-        dado[0] = random.nextInt(6) + 1;
-        dado[1] = random.nextInt(6) + 1;
-        return dado;
-    }
+		dado[0] = random.nextInt(6) + 1;
+		dado[1] = random.nextInt(6) + 1;
+		return dado;
+    	}
 
 }
