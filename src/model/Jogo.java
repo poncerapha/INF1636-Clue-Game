@@ -105,8 +105,8 @@ public class Jogo {
 		solucao[1] = r.nextInt(6) + 6;
 		solucao[2] = r.nextInt(6) + 12;
 		var assasino = suspeitos[solucao[0]];
-		var arma = armas[solucao[1]];
-		var lugar = comodos[solucao[2]];
+		var arma = armas[solucao[1]-6];
+		var lugar = comodos[solucao[2]-12];
     
     		envelope.setAssasino(assasino);
 		envelope.setArma(arma);
