@@ -1,11 +1,13 @@
-package model;
+package Model;
 
 public class Jogador {
-	int eliminado = 0, suspeito = -1;
+	int eliminado = 0, suspeito = -1, qtdCartasJog, cartasJog[];
 	String nome;
 	
-	public Jogador(String nome, int suspeito) {
+	public Jogador(String nome, int suspeito, int qtdCartasJog, int [] cartasJog) {
 		this.nome = nome;
 		this.suspeito = suspeito;
+		this.qtdCartasJog = qtdCartasJog;
+		this.cartasJog = cartasJog;
 	}
 }
